@@ -1,3 +1,12 @@
-<h2>{{ location.name | uppercase }} Details</h2>
-<div><span>id: </span>{{location.id}}</div>
-<div><span>name: </span>{{location.name}}</div>
+<h2>Locations</h2>
+<ul class="locations">
+<li *ngFor="let location of locations" (click)="onSelect(location)">
+  {{location.name}}
+  </li>
+</ul>
+
+
+<div *ngIf="selectedLocation">
+  <h2>{{ selectedLocation.name }} Forecast</h2>
+  <div><span>State: </span>{{ selectedLocation.id }}</div>
+</div>

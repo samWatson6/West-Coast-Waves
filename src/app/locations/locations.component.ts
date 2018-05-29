@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Location} from '../Location'
+import {Location} from '../Location';
+import { LOCATIONS} from '../mock-locations'
 
 @Component({
   selector: 'app-locations',
@@ -7,10 +8,15 @@ import {Location} from '../Location'
   styleUrls: ['./locations.component.css']
 })
 export class LocationsComponent implements OnInit {
-  location: Location = {
-    id: 1,
-    name: 'Pacifica'
-  };
+
+
+  locations = LOCATIONS;
+
+  selectedLocation: Location;
+
+  onSelect(location: Location): void {
+    this.selectedLocation = location;
+  }
 
   constructor() { }
 
