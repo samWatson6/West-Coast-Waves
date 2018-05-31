@@ -11,13 +11,14 @@ app.use(express.static(__dirname + '/../node_modules'));
 
 
 app.get('/api/:location', (req, res) => {
+  const location = `${req.params.location}`;
+
   influx.query(`
     select * from tide
-    where location =~ /(?i)(${place})/
+    where location =~ /(?i)(${location})/
   `)
   .then( result => response.status(200).json(result) )
-  .catch( error => response.status(500).json({ error }) );
-};
+  .catch( error => response.status(500).json({ error }));
 })
 
 app.listen(8080, function() {
