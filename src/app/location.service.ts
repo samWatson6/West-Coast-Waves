@@ -12,9 +12,6 @@ export class LocationService {
   return of(LOCATIONS);
 }
 
-// getHeroes(): Observable<Hero[]> {
-//   return of(HEROES);
-// }
 
   constructor() { }
 }
