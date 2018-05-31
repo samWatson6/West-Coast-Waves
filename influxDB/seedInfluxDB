@@ -37,20 +37,6 @@ const writeDataToInflux = (locationObj) => {
 
 writeDataToInflux(mockdata);
 
-// influx.query(`
-//     select * from tide
-//     where location =~ /(?i)(${place})/
-//   `)
-//   .then( result => response.status(200).json(result) )
-//   .catch( error => response.status(500).json({ error }) );
 
 
-
-// influx.query(`
-//     select * from tide
-//     where location =~ /(?i)(${place})/
-//   `)
-//   .then( result => response.status(200).json(result) )
-//   .catch( error => response.status(500).json({ error }) );
-// };
 
