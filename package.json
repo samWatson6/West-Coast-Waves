@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "nodemon": "nodemon server/server.js",
+    "seedDB": "node ./influxDB/seedInfluxDB",
+    "createInfluxDB": "node ./influxDB/createInfluxDatabase.js"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +28,7 @@
     "express": "^4.16.3",
     "hoek": "^5.0.3",
     "influx": "^5.0.7",
+    "influxdb-nodejs": "^2.7.6",
     "node": "^10.2.0",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
