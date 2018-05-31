@@ -1,7 +1,7 @@
-const Influx = require('influx');
+const db = require('./Dbconnection.js')
 const mockdata = require('./mockdata.js')
 
-const influx = new Influx.InfluxDB({
+const influx = new db.InfluxDB({
   host: 'localhost',
   database: 'ocean_tides',
   schema: [
