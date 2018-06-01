@@ -13,13 +13,12 @@ app.use(express.static(__dirname + '/../node_modules'));
 
 app.get('/api/:location', (request, response) => {
   const { location } = request.params;
-  
 
   db.query(`
     select * from tide
     where location =~ /(?i)(${location})/
   `)
-  .then(result => response.status(200).json(result))
+  .then(result => response.status(200).json('result'))
   .catch(error => response.status(500).json({ error }));
 });
 

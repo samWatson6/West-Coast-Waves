@@ -21,7 +21,7 @@ export class LocationsComponent implements OnInit {
   constructor(private locationService: LocationService) { }
 
   getLocations(): void {
-  this.locationService.getLocations()
+    this.locationService.getLocations()
       .subscribe(locations => this.locations = locations);
   }
 
@@ -30,4 +30,6 @@ export class LocationsComponent implements OnInit {
   }
 
 }
+
+
 

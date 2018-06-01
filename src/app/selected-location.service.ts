@@ -9,16 +9,18 @@ import { axios } from 'axios';
 })
 export class SelectedLocationService {
 
-  getTides(location) {
-   axios.get(`/api/${location}/`)
-          .then((res) => {
-            console.log(res.data));
-            return res.data;
-          })
-          .catch((err) => {
-            throw err;
-        })
-      }
+  getTides(location): Observable<tides> {
+   // axios.get(`/api/${location}/`)
+   //        .then((res) => {
+   //          console.log(res.data));
+   //          return res.data;
+   //        })
+   //        .catch((err) => {
+   //          throw err;
+   //      })
+   //    }
+   return of('tides output');
+   
   constructor() { }
 }
 
