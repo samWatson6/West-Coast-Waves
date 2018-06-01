@@ -21,6 +21,9 @@ export class LocationDetailsComponent implements OnInit {
       .subscribe(res => console.log(res));
   }
 
+  ngOnChange() {
+    this.getTides(this.location);
+  }
 
   ngOnInit() {
     this.getTides(this.location)

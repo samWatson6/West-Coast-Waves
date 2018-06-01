@@ -31,7 +31,8 @@
     "influx": "^5.0.7",
     "influxdb-nodejs": "^2.7.6",
     "node": "^10.2.0",
-    "rxjs": "^6.0.0",
+    "rxios": "^1.1.2",
+    "rxjs": "^6.2.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
