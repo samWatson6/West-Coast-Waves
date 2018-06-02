@@ -11,18 +11,21 @@ export class LocationDetailsComponent implements OnInit {
 
   @Input() location: Location;
 
-  chart = [];
+  chart = '';
 
   constructor(private tides: SelectedLocationService) { }
 
 
   getTides(): void {
     this.tides.getTides()
-      .subscribe(res => console.log(res));
+      .subscribe(tides => this.chart = tides));
+      setTimeout(function () {
+        console.log('results: ', this.chart)
+      }, 1000)
   }
 
-  ngOnChange() {
-    this.getTides(this.location);
+  ngOnChanges() {
+    this.getTides();
   }
 
   ngOnInit() {
@@ -30,4 +33,6 @@ export class LocationDetailsComponent implements OnInit {
   }
 
 }
+
+
 
